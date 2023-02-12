@@ -9,6 +9,17 @@ const jest = require('jest');
 
 class Employee {
     constructor(name, id, email) {
+      // validation
+      if (!name || typeof name !== 'string') {
+        throw new Error('Employee name cannot be an empty string')
+      }
+      if (!id || typeof id !== 'string') {
+        throw new Error('Employee id cannot be an empty string')
+      }
+      if (!email || typeof email !== 'string') {
+        throw new Error('Employee email cannot be an empty string')
+      }
+
       this.name = name;
       this.id = id;
       this.email = email;
@@ -44,6 +55,9 @@ class Employee {
 class Manager extends Employee {
     constructor(name, id, email, officeNumber) {
         super(name, id, email)
+        if (!officeNumber || typeof officeNumber !== 'string') {
+            throw new Error('Manager office number cannot be an empty string')
+          }
         this.officeNumber = officeNumber;
     }
     // Overridden to return 'Manager'
@@ -57,6 +71,9 @@ class Manager extends Employee {
 class Engineer extends Employee {
     constructor(name, id, email, github) {
         super(name, id, email)
+        if (!github || typeof github !== 'string') {
+            throw new Error('Engineer github cannot be an empty string')
+          }
         this.github = github;
     }
     getGithub() {
@@ -74,6 +91,9 @@ class Engineer extends Employee {
 class Intern extends Employee {
     constructor(name, id, email, school) {
         super(name, id, email)
+        if (!school || typeof school !== 'string') {
+            throw new Error('Intern school cannot be an empty string')
+          }
         this.school = school;
     }
     getSchool() {
