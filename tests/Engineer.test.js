@@ -1,4 +1,4 @@
-const Engineer = require('./Engineer')
+const Engineer = require('../lib/Engineer.js')
 
 describe('Engineer class', () => {
     it('throws an error if github is not provided', () => {

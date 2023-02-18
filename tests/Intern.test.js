@@ -1,4 +1,4 @@
-const Intern = require('./Intern')
+const Intern = require('../lib/Intern.js')
 
 describe('Intern class', () => {
     it('throws an error if school is not provided', () => {

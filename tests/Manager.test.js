@@ -1,4 +1,4 @@
-const Manager = require('./Manager')
+const Manager = require('../lib/Manager.js')
 
 describe('Manager class', () => {
     it('throws an error if officeNumber is not provided or not a string', () => {
@@ -20,7 +20,7 @@ describe('Manager class', () => {
         expect(manager.getName()).toBe('Mugi');
         expect(manager.getId()).toBe(813);
         expect(manager.getEmail()).toBe('mugi@magical.com');
-        expect(manger.getRole()).toBe('Manager');
+        expect(manager.getRole()).toBe('Manager');
     });
 
 });
