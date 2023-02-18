@@ -12,7 +12,7 @@ describe('Manager class', () => {
         expect(manager.name).toBe('Mugi');
         expect(manager.id).toBe(813);
         expect(manager.email).toBe('mugi@magical.com');
-        expect(manger.officeNumber).toBe('8');
+        expect(manager.officeNumber).toBe('8');
     });
 
     it('inherits properties and methods from the employee class', () => {
