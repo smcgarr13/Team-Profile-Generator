@@ -1,4 +1,5 @@
-const Employee = require('./Employee')
+// const Employee = require('./Employee')
+const Employee = require('../lib/Employee');
 
 test('Can set name via constructor argument', () => {
     const name = 'Mugi';
@@ -38,5 +39,5 @@ test('getEmail() should return email', () => {
 
 test('getRole() should return "Employee"', () => {
     const employee = new Employee('Foo', 1, 'mugi@magical.com');
-    expect(employee.getEmail()).toBe('Employee');
+    expect(employee.getRole()).toBe('Employee');
 });
