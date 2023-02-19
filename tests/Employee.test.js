@@ -1,4 +1,3 @@
-// const Employee = require('./Employee')
 const Employee = require('../lib/Employee.js');
 
 test('Can set name via constructor argument', () => {
