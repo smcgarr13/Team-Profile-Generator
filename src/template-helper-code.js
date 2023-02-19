@@ -9,14 +9,25 @@ const managerFunction = (name, id, email, officeNumber) =>
 </div>
 `;
 
+// const engineerFunction = (name, id, email, github) =>
+// `<div class="card">
+// <h2>${name}</h2>
+// <p>ID: ${id}</p>
+// <p>Email: <a href='mailto: ${email}'>${email}</a></p>
+// <p>GitHub: ${github}</p>
+// </div>
+// `;
+
 const engineerFunction = (name, id, email, github) =>
 `<div class="card">
 <h2>${name}</h2>
 <p>ID: ${id}</p>
 <p>Email: <a href='mailto: ${email}'>${email}</a></p>
-<p>GitHub: ${github}</p>
+<p>GitHub: <a href='https://github.com/${github}'>${github}</a></p>
 </div>
 `;
+
+// const modifiedReadme = `## Table of Contents\n\n${tableOfContents}\n\n${readme}\n\n## Questions\n\nYou can find me on GitHub at [${answers.GitHub}](https://github.com/${answers.GitHub})\n\n${answers.questions}\n\nEmail: ${answers.email}`;
 
 const internFunction = (name, id, email, school) =>
 `<div class="card">
@@ -51,7 +62,7 @@ const mainBody = (cards) => {
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="./dist/style.css" />
+            <link rel="stylesheet" href="../dist/style.css" />
           </head>
           <body>
             <header>
