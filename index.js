@@ -129,6 +129,7 @@ const generateHTML = (cards) => {
 const init = async () => {
   const cards = [];
   let done = false;
+  let hasManager = false;
 
   while (!done) {
     const { employeeType } = await inquirer.prompt([
@@ -136,13 +137,14 @@ const init = async () => {
         type: "list",
         name: "employeeType",
         message: "What type of employee would you like to add?",
-        choices: ["Manager", "Engineer", "Intern", "Finish building team"],
+        choices: hasManager? ["Engineer", "Intern", "Finish building team"] : ["Manager", "Engineer", "Intern", "Finish building team"],
       },
     ]);
 
     switch (employeeType) {
       case "Manager":
         cards.push(await generateManager());
+        hasManager = true;
         break;
       case "Engineer":
         cards.push(await generateEngineer());

@@ -1,31 +1,38 @@
-## User Story
-AS A manager
-I WANT to generate a webpage that displays my team's basic info
-SO THAT I have quick access to their emails and GitHub profiles
+# Team-Profile-Generator
 
-## Acceptance Criteria
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for my team members and their information
-THEN an HTML file is generated that displays a nicely formatted team roster based on user input
+## Description
+This is a command-line application that accepts user input to generate an HTML file that displays a nicely formatted team roster and includes the team's basic info, emails, and GitHub profiles.
 
-WHEN I click on an email address in the HTML
-THEN my default email program opens and populates the TO field of the email with the address
+## Installation
+Clone repo: https://github.com/smcgarr13/Team-Profile-Generator
 
-WHEN I click on the GitHub username
-THEN that GitHub profile opens in a new tab
+## Usage
+Simply answer the question prompts starting with the "Manager".  Once the "Manager" has been declared, the menu options will show "Engineer", "Intern", and "Finish building team" – continue answering the respective question prompts. Once you have selected "Finish building team", your HTML file will be generated automatically and you can review your team roster on the browser.
 
-WHEN I start the application
-THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+All email addresses and GitHub profiles are "clickable" and will redirect you to the respective links.  When you click on an email address in the HTML, your default email program will open and the email address "clicked" will populate in the "TO" field of the email.  When you click on the GitHub username in the HTML, that GitHub profile will open in a new tab.
 
-WHEN I enter the team manager’s name, employee ID, email address, and office number
-THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my 
-team
+## Credits
+N/A
 
-WHEN I select the engineer option
-THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
+## License
+MIT
 
-WHEN I select the intern option
-THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
+## Contributing
+We are not accepting contributions at this time as we are working hard to complete the initial release of this project. We plan to start accepting contributions in the future. Thank you for your patience, understanding, and interest! :)
 
-WHEN I decide to finish building my team
-THEN I exit the application, and the HTML is generated
+## Tests
+N/A
+
+## Questions
+
+You can find me on GitHub at [smcgarr13](https://github.com/smcgarr13)
+
+Please email me directly if you have any additional questions.
+
+Email: unicorn@magical.com
+
+## Link to Demonstration Video:
+https://drive.google.com/file/d/1UNuRH15cubbiEjfjJn9oLORq49B1GyBv/view
+
+## Link to Repo: 
+https://github.com/smcgarr13/Team-Profile-Generator
