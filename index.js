@@ -18,13 +18,13 @@ const {
 } = require("./src/template-helper-code.js");
 
 const distPath = path.join(__dirname, "dist");
-//ensure the dist folder exists
+//check for dist folder
 if (!fs.existsSync(distPath)) {
   fs.mkdirSync(distPath);
 }
 
+// Team set-up question prompts
 const generateManager = async () => {
-  // const answers = inquirer.createPromptModule([
   const answers = await inquirer.prompt([
     {
       type: "input",
@@ -56,7 +56,6 @@ const generateManager = async () => {
 };
 
 const generateEngineer = async () => {
-  // const answers = inquirer.createPromptModule([
   const answers = await inquirer.prompt([
     {
       type: "input",
@@ -88,7 +87,6 @@ const generateEngineer = async () => {
 };
 
 const generateIntern = async () => {
-  // const answers = inquirer.createPromptModule([
   const answers = await inquirer.prompt([
     {
       type: "input",
@@ -119,9 +117,7 @@ const generateIntern = async () => {
   );
 };
 
-// const managerTemplate = generateManager(Manager, templateHelperCode.templateHelperCode);
-
-// dynamically create HTML file
+// dynamically generate HTML file
 const generateHTML = (cards) => {
   return mainBody(cards);
 };
@@ -137,7 +133,9 @@ const init = async () => {
         type: "list",
         name: "employeeType",
         message: "What type of employee would you like to add?",
-        choices: hasManager? ["Engineer", "Intern", "Finish building team"] : ["Manager", "Engineer", "Intern", "Finish building team"],
+        choices: hasManager
+          ? ["Engineer", "Intern", "Finish building team"]
+          : ["Manager", "Engineer", "Intern", "Finish building team"],
       },
     ]);
 
