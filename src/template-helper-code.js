@@ -1,3 +1,4 @@
+// Manager Card
 const managerFunction = (name, id, email, officeNumber) =>
   `<div class="card">
 <h2>${name}</h2>
@@ -8,15 +9,7 @@ const managerFunction = (name, id, email, officeNumber) =>
 </div>
 `;
 
-// const engineerFunction = (name, id, email, github) =>
-// `<div class="card">
-// <h2>${name}</h2>
-// <p>ID: ${id}</p>
-// <p>Email: <a href='mailto: ${email}'>${email}</a></p>
-// <p>GitHub: ${github}</p>
-// </div>
-// `;
-
+// Engineer Card
 const engineerFunction = (name, id, email, github) =>
   `<div class="card">
 <h2>${name}</h2>
@@ -27,8 +20,7 @@ const engineerFunction = (name, id, email, github) =>
 </div>
 `;
 
-// const modifiedReadme = `## Table of Contents\n\n${tableOfContents}\n\n${readme}\n\n## Questions\n\nYou can find me on GitHub at [${answers.GitHub}](https://github.com/${answers.GitHub})\n\n${answers.questions}\n\nEmail: ${answers.email}`;
-
+// Intern Card
 const internFunction = (name, id, email, school) =>
   `<div class="card">
 <h2>${name}</h2>
@@ -39,6 +31,7 @@ const internFunction = (name, id, email, school) =>
 </div>
 `;
 
+// HTML for main body
 const mainBody = (cards) => {
   return `
         <!DOCTYPE html>
